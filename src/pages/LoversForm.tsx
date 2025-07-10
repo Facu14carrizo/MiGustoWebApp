@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import '../pages/Contacto.css';
 import emailjs from '@emailjs/browser';
-import Empanada1 from '../lovers/assets/Empanadas/Mexican-Veggie-demo.png';
-import Empanada2 from '../lovers/assets/Empanadas/Mexican-Pibil-Pork-demo.png';
-import Empanada3 from '../lovers/assets/Empanadas/Matambre a la pizza.png';
-import Empanada4 from '../lovers/assets/Empanadas/burger.png';
 import '../lovers/index.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+
+const Empanada1 = new URL('../lovers/assets/Empanadas/Mexican-Veggie-demo.png', import.meta.url).href;
+const Empanada2 = new URL('../lovers/assets/Empanadas/Mexican-Pibil-Pork-demo.png', import.meta.url).href;
+const Empanada3 = new URL('../lovers/assets/Empanadas/Matambre a la pizza.png', import.meta.url).href;
+const Empanada4 = new URL('../lovers/assets/Empanadas/burger.png', import.meta.url).href;
 
 const sucursales = [
   'Ballester', 'Balvanera', 'Barrancas', 'Belgrano', 'Bella Vista', 'Campana', 'Del Viso', 'Devoto', 'Don Torcuato', 'Escobar', 'Floresta', 'Florida', 'Gral. Pacheco', 'Hurlingham', 'Ituzaingo', 'Jose C. Paz', 'Los Polvorines', 'Martinez', 'Maschwitz', 'Mataderos', 'Merlo', 'Moreno', 'Muñiz', 'Munro', 'Palermo', 'Paternal', 'Pilar Centro', 'Pilar Derqui', 'Puerto Madero', 'San Fernando', 'San Martin', 'San Miguel', 'Tigre', 'Tortugas Norte', 'Villa Adelina', 'Villa Crespo', 'Villa Urquiza',
