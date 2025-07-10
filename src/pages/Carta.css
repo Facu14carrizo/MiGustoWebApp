@@ -1,0 +1,23 @@
+.carta-container {
+  padding: 2rem 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.background-overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/background-text.jpg');
+  background-size: 120% auto;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+  filter: contrast(1.2) brightness(1.2);
+}
