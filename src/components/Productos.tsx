@@ -219,7 +219,7 @@ export default function Productos() {
                                     onClick={() => setProductoSeleccionado(prod)}
                                     data-categoria={filtro}
                                     style={{ position: 'relative' }}
-                                >
+                                > 
                                     {tiene3D && (
                                         <span className="icono-3d" title="Vista 3D disponible" style={{position:'absolute',top:10,right:10,zIndex:2}}>
                                             <span className="icono-3d-minimal">3D</span>
@@ -228,44 +228,13 @@ export default function Productos() {
                                     <img src={prod.imagen} alt={prod.titulo} />
                                     <div className="producto-info">
                                         <h3
-                                            style={{
-                                                fontSize: '2.3rem',
-                                                fontWeight: 900,
-                                                margin: '0.7rem 0 0.7rem 0',
-                                                letterSpacing: '0.05em',
-                                                lineHeight: 1.12,
-                                                textAlign: 'center',
-                                                textShadow: '0 2px 8px #FFD70077, 0 1px 0 #fff',
-                                                padding: '0.45em 0.2em',
-                                                borderRadius: '22px',
-                                                border: '2.5px solid #FFD700',
-                                                boxShadow: '0 4px 24px 0 #FFD70033, 0 2px 8px 0 #0008',
-                                                position: 'relative',
-                                                overflow: 'visible',
-                                                background: 'transparent',
-                                            }}
+                                            className="producto-titulo-impresionante"
                                         >
-                                            <span style={{
-                                                display: 'inline',
-                                                background: 'linear-gradient(90deg, #FFD700 10%, #FFA500 60%, #fff 100%)',
-                                                WebkitBackgroundClip: 'text',
-                                                WebkitTextFillColor: 'transparent',
-                                                backgroundClip: 'text',
-                                                color: 'transparent',
-                                                backgroundSize: '300% 300%',
-                                                backgroundPosition: '0% 50%',
-                                                animation: 'brilloTituloCard 2.5s linear infinite',
-                                            }}>{prod.titulo}</span>
+                                            <span className="producto-titulo-texto">{prod.titulo}</span>
+                                            <div className="producto-titulo-brillo"></div>
+                                            <div className="producto-titulo-reflejo"></div>
                                         </h3>
-                                        <div style={{
-                                            width: '80%',
-                                            height: '0.7em',
-                                            margin: '-0.3em auto 0 auto',
-                                            background: 'linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.01) 100%)',
-                                            opacity: 0.7,
-                                            borderRadius: '50%',
-                                            filter: 'blur(2.5px)',
-                                        }}></div>
+                                        <div className="producto-titulo-sombra"></div>
                                     </div>
                                 </div>
                             );
