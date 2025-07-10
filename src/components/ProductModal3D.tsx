@@ -232,7 +232,7 @@ const ProductModal3D: React.FC<ProductModal3DProps> = ({ producto, onClose, tien
                                         'shadow-intensity': '1',
                                         'shadow-softness': '1',
                                         exposure: '1.2',
-                                        'camera-orbit': producto.titulo === 'Cheese Burguer' ? '180deg 90deg 2.5m' : '0deg 75deg 2.5m',
+                                        'camera-orbit': getInitialCameraOrbit(producto.titulo),
                                         'min-camera-orbit': 'auto auto 3m',
                                         'max-camera-orbit': 'auto auto 3m',
                                         'interaction-prompt': 'none',
@@ -348,6 +348,24 @@ const ProductModal3D: React.FC<ProductModal3DProps> = ({ producto, onClose, tien
             </div>
         </div>
     );
+};
+
+// Función para determinar el ángulo inicial óptimo para cada modelo 3D
+const getInitialCameraOrbit = (productoTitulo: string): string => {
+    switch (productoTitulo) {
+        case 'Cheese Burguer':
+            return '180deg 65deg 2.2m'; // Ángulo más bajo para ver mejor el interior
+        case 'Big Burguer':
+            return '210deg 60deg 2.3m'; // Ligeramente rotado para ver el relleno
+        case 'Mexican Pibil pork':
+            return '30deg 70deg 2.4m'; // Ángulo que muestra mejor los detalles del relleno
+        case 'Mexican Veggie':
+            return '330deg 65deg 2.3m'; // Ángulo que resalta los vegetales
+        case 'Matambre a la pizza':
+            return '150deg 60deg 2.2m'; // Ángulo que muestra mejor el queso y el matambre
+        default:
+            return '0deg 75deg 2.5m'; // Ángulo predeterminado para otros productos
+    }
 };
 
 export default ProductModal3D; 

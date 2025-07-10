@@ -344,7 +344,7 @@ const Viewer3D: React.FC = () => {
         'shadow-intensity': '1',
         'shadow-softness': '1',
         exposure: '1.2',
-        'camera-orbit': '0deg 75deg 2.5m',
+        'camera-orbit': '210deg 60deg 2.3m', // Mejor ángulo para ver el Big Burger
         'min-camera-orbit': 'auto auto 3m',
         'max-camera-orbit': 'auto auto 3m',
         'interaction-prompt': 'none',
