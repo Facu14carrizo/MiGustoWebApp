@@ -63,7 +63,7 @@ export default function Productos2() {
     return (
         <div className="productos-section">
             <div className="background-overlay"></div>
-            <div className="productos-container">
+            <div className="productos-container" style={{ paddingTop: '1rem' }}>
                 <h2 className="productos-titulo">Conocé nuestros productos</h2>
 
                 <div className="productos-busqueda">

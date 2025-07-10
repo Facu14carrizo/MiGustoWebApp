@@ -7,13 +7,15 @@ body {
     background-color: #000;
     overflow: hidden;
     isolation: isolate;
+    margin-top: -80px;
+    padding-top: 80px;
 }
 
 .productos-container {
     width: 85%;
     max-width: 1800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0 2rem 2rem;
     position: relative;
     z-index: 1;
 }
@@ -658,8 +660,8 @@ body {
 /* Responsive styles */
 @media (max-width: 768px) {
     .productos-container {
-        padding: 1rem;
-        margin-top: 4rem;
+        padding: 0 1rem 1rem;
+        margin-top: 0;
     }
 
     .productos-titulo {
